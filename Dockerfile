@@ -4,8 +4,8 @@ USER spring:spring
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
-#docker  build -t  eureka .
-#docker run -p 8761:8761 eureka
+#docker  build -t  empleado .
+#docker run --name empleado --network red_paradigmas  -p 8081:8081 empleado
 #docker login
-#docker tag micro  allamchz/eureka:latest
-#docker push allamchz/eureka:latest
+#docker tag micro  allamchz/empleado:latest
+#docker push allamchz/empleado:latest
